@@ -1,8 +1,14 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class CambioEscena : MonoBehaviour
 {
+    string texto = "HolaMundo"; //Input de nombre
+    bool esPalabra = texto.All(char.IsLetter);
+    int numero = "5";   //Input de numero
+    bool esNumero = .All(int.)
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -19,9 +25,13 @@ public class CambioEscena : MonoBehaviour
         SceneManager.LoadScene("UsuarioNuevo");
     }
 
+
     public void AñadirUsuario()
     {
-
-        SceneManager.LoadScene("SampleScene");
+        if (esNumero == true && esPalabra == true)
+        {
+            SceneManager.LoadScene("SampleScene");
+        }
+        
     }
 }
