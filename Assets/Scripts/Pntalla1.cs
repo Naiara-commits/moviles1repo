@@ -16,14 +16,14 @@ public class Pntalla1 : MonoBehaviour
 
     private const string EscenaNuevoUsuario = "UsuarioNuevo";
 
-    private RepositorioUsuarios repositorio;
+    private Users repositorio;
     private RectTransform contenido;
     private TMP_InputField inputBuscar;
     private TextMeshProUGUI textoResultado, _textoCabecera;
     private GameObject overlay;
     private TextMeshProUGUI _textoEliminar, _textoCuentaAtras;
     private Slider barra;
-    private ToastUI toast;
+    private MensajeTempo msj;
     private Coroutine rutinaEliminar;
 
     private void Awake()
@@ -35,7 +35,7 @@ public class Pntalla1 : MonoBehaviour
         ConstruirInterfaz(area);
         ConfigurarContenido();
         ConstruirOverlay(raiz);
-        toast = ToastUI.Crear(raiz);
+        msj = MensajeTempo.Crear(raiz);
 
         ActualizarLista();
 

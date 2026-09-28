@@ -15,12 +15,15 @@ public class Usuario : MonoBehaviour
     private TextMeshProUGUI textoError;
     private void Awake()
     {
-
+        var raiz = (RectTransform)FindFirstObjectByType<Canvas>().transform;
         //validar nombres y edades
-        inputNombre.characterLimit = ValidarUsuario.NombreMax;
+        inputNombre.characterLimit = ValidadorUsuario.NombreMax;
         inputEdad.contentType = TMP_InputField.ContentType.IntegerNumber;
 
         inputEdad.characterLimit = 3;       //Maximo de numeros por edad
+
+        //Msj error si no es correcto
+
 
 
     }
